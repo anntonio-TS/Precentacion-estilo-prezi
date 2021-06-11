@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+        <title>PROYECTO PROGRAMACION III</title>
+
+        <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/"/>
+        <link rel="stylesheet" type="text/css" href="css/prezijs.css"/>
+        <link rel="stylesheet" type="text/css" href="css/prezis.css"/>
+
+        <link href="http://fonts.googleapis.com/css?family=Muli:400,300italic,400italic" rel="stylesheet" type="text/css"/>
+
+        <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://janne.aukia.com/zoomooz/jquery.zoomooz.min.js"></script>-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.zoomooz.min.js"></script>
+        
+        <script type="text/javascript" src="js/prezijs.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="prezi.css"/>
+    </head>
+
+    <body>
+        <div class="zoomViewport">
+            <div class="zoomContainer">
+
+                <img id="gr" src="img/graf.jpg" />
+
+                <span id="overview" data-targetsize="0.01"></span>
+
+                <div id="title" data-targetsize="0.2">Proyecto Final</div>
+
+                <div id="bn" data-targetsize="0.7">
+                    <span>Buenas noches ingeniero</span><br/>
+                    
+                    <ul>
+                        <li>Esta </li>
+                        <li>Es</li>
+                        <li>La</li>
+                        <li>Presentacion </li>
+                    </ul>
+                </div>
+
+                <div id="gra">
+                    <span>GRAFOS</span><br/>
+                    
+                    <img src="img/grafos.png" width="150"/>
+                </div>
+
+                <div id="lan" style="text-align:center">
+                    <span>LANGUAGES</span><br/>
+                    
+                    <img src="img/lan.jpg" width="70"/>
+                </div>
+
+                <div id="cod" data-targetsize="0.7">
+                    <span>COD</span><br/>
+                </div>
+
+                <div id="cod1">
+                    <span>Codigo 1</span>
+
+                    <pre>
+public String toString(){
+
+String res = "" ;
+
+for (int i = 1 ; i {= numVertices() ; i++) {
+
+res += "Vértice: " + i;
+
+                    </pre>
+                </div>
+
+                <div id="cod2">
+                    <span>Codigo 2</span>
+
+                    <pre>
+
+ res += "\n";
+
+ } return res; 
+                    </pre>
+                </div>
+
+                <div id="cod3">
+                    <span>Codigo 3</span>
+
+                    <pre>
+   public class Node {
+   private String city;
+ private List <Edge> edges;
+                        
+ public Node(String city) {
+       this.city = city;
+     }
+                        
+     public String getCity() {
+                            
+                    </pre>
+                </div>
+
+                <div id="cod4">
+                    <span>Codigo 4</span>
+
+                    <pre>
+         public List<Edge> getEdges() {
+           return edges;
+             }
+                     
+           public void addEdge(Edge edge) {
+             if (edges == null) {
+             edges = new ArrayList<>();
+             }
+             edges.add(edge);
+             }
+                    </pre>
+                </div>
+
+                <div id="cod5">
+                    <span>Codigo 5</span>
+
+                    <pre>
+    @Override
+     public String toString() {
+      return "\n \tNode [city=" + city + ", edges=" + edges + "]";
+          }
+            }
+                    </pre>
+                </div>
+
+                <div id="carne" data-targetsize="0.7">
+                    <span>Por </span><br/>
+
+                    <ul>
+                        <li>Bryan Joseph Chacaj Corado 1290-19-5032 </li>
+                        <li>Antonio Jose Tojin Silva 1290-19-10010</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>  <!-- zoomContainer -->
+        </div>      <!-- zoomViewport -->
+
+        <div id="counter"></div>
+
+        <script type="text/javascript">
+            $(window).load(function() {
+                prezijs({
+                    slides: [
+                        'overview',
+                        'title',
+                        'bn',
+                        'gra', 'lan',
+                        'cod',
+                        'cod1', 'cod2', 'cod3', 'cod4', 'cod5', 
+                        'carne'
+                    ],
+                    layout: {
+                        overview: {pos:[0.5, 0.5]},
+                        title:    {pos:[0.1, 0.1], center:[0, 0]},
+                        bn:  {pos:[0.3, 0.1], center:[0, 0]},
+                        gra:    {pos:[0.1, 0.35], center:[0, 0]},
+                        lan:    {pos:[0.3, 0.35], center:[0, 0]},
+                        cod:      {pos:[0.0,      0.65], center:[0, 0]},
+                        cod1:     {pos:[0.1-0.03, 0.65], center:[0, 0]},
+                        cod2:     {pos:[0.3+0.00, 0.65], center:[0, 0]},
+                        cod3:     {pos:[0.4+0.05, 0.65], center:[0, 0]},
+                        cod4:     {pos:[0.6+0.05, 0.65], center:[0, 0]},
+                        cod5:     {pos:[0.8+0.11, 0.65], center:[0, 0]},
+                        carne:   {pos:[0.1, 0.9], center:[0, 0]}
+                    }
+                });
+            });
+        </script>
+
+    </body>
+</html>
